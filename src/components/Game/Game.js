@@ -41,7 +41,7 @@ function Game() {
 
   return (
     <>
-      {gameOver && <EndBanner hasWon={hasWon} restart={reset} />}
+      {gameOver && <EndBanner hasWon={hasWon} answer={answer} restart={reset} />}
       <Guesses guessList={guesses} />
       <GuessBox disabled={gameOver} handleEntry={(guess) => {
         if (guess === answer)

@@ -1,6 +1,6 @@
 import React from "react";
 
-function EndBanner({ hasWon, restart }) {
+function EndBanner({ hasWon, answer, restart }) {
   const ResetButton = () => <button type="button" onClick={restart}>Play Again</button>
   return (
     hasWon ?
@@ -13,7 +13,7 @@ function EndBanner({ hasWon, restart }) {
       </div>
       :
       <div className="sad banner">
-        <p>Sorry, the correct answer is <strong>LEARN</strong>.</p>
+        <p>Sorry, the correct answer is <strong>{answer}</strong>.</p>
         <ResetButton />
       </div>
   );

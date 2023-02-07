@@ -12,7 +12,7 @@ function Guess({ word }) {
         if (!word || !word[index])
           return <span key={index} className="cell" />
         const { status, letter } = word[index];
-        return <span key={index} className={`cell ${status}`}>{letter && letter}</span>
+        return <span key={index} className={`cell ${status}`}>{letter}</span>
       })}
     </p>);
 }
