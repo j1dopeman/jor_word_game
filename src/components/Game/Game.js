@@ -34,7 +34,9 @@ function Game() {
     for (let item of word) {
       if (item.status === 'correct')
         letterMap[item.letter] = item.status;
-      if (item.status === 'misplaced' && letterMap[item.letter] !== 'correct')
+      else if (item.status === 'misplaced' && letterMap[item.letter] !== 'correct')
+        letterMap[item.letter] = item.status;
+      else if (!letterMap[item.letter])
         letterMap[item.letter] = item.status;
     }
   }
